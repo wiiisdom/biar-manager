@@ -5,11 +5,27 @@
   <packaging>jar</packaging>
   <version>1.1-SNAPSHOT</version>
   <name>biar-manager</name>
+  <description>BIAR BI ARchive File library</description>
+  <url>http://github.com/bobman38/biar-manager</url>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Julien Bras</name>
+      <email>julienbras@sidoine.org</email>
+      <organizationUrl>https://github.com/bobman38</organizationUrl>
+    </developer>
+  </developers>
   <scm>
-    <connection>scm:git:ssh://git@github.com/bobman38/biar-manager.git</connection>
+    <connection>scm:git:git://github.com/bobman38/biar-manager.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/bobman38/biar-manager.git</developerConnection>
-    <tag>HEAD</tag>
-    <url>https://github.com/bobman38/biar-manager</url>
+    <url>https://github.com/bobman38/biar-manager/tree/master</url>
   </scm>
   <properties>
     <maven.compiler.target>1.8</maven.compiler.target>
