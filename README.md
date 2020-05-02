@@ -16,23 +16,21 @@ Add it to your maven project:
 
 In `dependencies`:
 ```
-    <dependency>
-      <groupId>io.github.bobman38</groupId>
-      <artifactId>biar-manager</artifactId>
-      <version>1.0.0</version>
-    </dependency>
+<dependency>
+  <groupId>io.github.bobman38</groupId>
+  <artifactId>biar-manager</artifactId>
+  <version>1.0.0</version>
+</dependency>
 ```
 
 In `repositories`:
 
 ```
-	<repository>
-		<id>github</id>
-		<url>https://maven.pkg.github.com/bobman38/biar-manager</url>
-	</repository>
-
+<repository>
+  <id>github</id>
+  <url>https://maven.pkg.github.com/bobman38/biar-manager</url>
+</repository>
 ```
-
 
 Then use it:
 
@@ -45,6 +43,14 @@ InfoObjects obj = biarFile.getIndex();
 
 // To get an InputStream of the first file of an object
 InputStream inputStream = biarFile.getFile(infoObject, 1);
+```
+
+## Release
+
+To release use release maven plugin:
+
+```
+mvn release:prepare release:perform
 ```
 
 ## Thanks
