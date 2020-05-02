@@ -22,16 +22,19 @@
       <organizationUrl>https://github.com/bobman38</organizationUrl>
     </developer>
   </developers>
+
   <scm>
     <connection>scm:git:git://github.com/bobman38/biar-manager.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/bobman38/biar-manager.git</developerConnection>
     <url>https://github.com/bobman38/biar-manager/tree/master</url>
   </scm>
+
   <properties>
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 </properties>
+
   <dependencies>
     <dependency>
     <!-- for tests -->
@@ -40,25 +43,79 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
-    <!-- Eclipse Link  -->
-    <!-- <dependency>
-		    <groupId>org.eclipse.persistence</groupId>
-		    <artifactId>eclipselink</artifactId>
-		    <version>2.5.2</version>
-		</dependency> -->
-<dependency>
-    <groupId>org.eclipse.persistence</groupId>
-    <artifactId>org.eclipse.persistence.moxy</artifactId>
-    <version>2.7.6</version>
-</dependency>
-
+    <!-- eclipse link -->
+    <dependency>
+        <groupId>org.eclipse.persistence</groupId>
+        <artifactId>org.eclipse.persistence.moxy</artifactId>
+        <version>2.7.6</version>
+    </dependency>
   </dependencies>
+
   <distributionManagement>
-   <repository>
-     <id>github</id>
-     <name>bobman38</name>
-     <url>https://maven.pkg.github.com/bobman38/biar-manager</url>
-   </repository>
-</distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+  
+  <build>
+    <!-- OSSRH publishing -->
+    <plugins>
+      <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.6.7</version>
+        <extensions>true</extensions>
+        <configuration>
+          <serverId>ossrh</serverId>
+          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+        </configuration>
+      </plugin>
+      <!-- Attaching source to comply OSSRH -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.2.1</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- Attaching java doc to comply OSSRH -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9.1</version>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- GPG file generation to comply OSSRH -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.5</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>
