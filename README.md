@@ -23,15 +23,6 @@ In `dependencies`:
 </dependency>
 ```
 
-In `repositories`:
-
-```
-<repository>
-  <id>github</id>
-  <url>https://maven.pkg.github.com/bobman38/biar-manager</url>
-</repository>
-```
-
 Then use it:
 
 ```
@@ -47,10 +38,16 @@ InputStream inputStream = biarFile.getFile(infoObject, 1);
 
 ## Release
 
-To release use release maven plugin:
+The project is setup to be released on [Sonatype OSSRH](https://oss.sonatype.org).
+
+Main steps for the release:
 
 ```
-mvn release:prepare release:perform
+# Set the version
+mvn versions:set -DnewVersion=1.0.0
+
+# Deploy
+mvn clean deploy
 ```
 
 ## Thanks
