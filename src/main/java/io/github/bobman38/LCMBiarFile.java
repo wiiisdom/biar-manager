@@ -49,7 +49,7 @@ public class LCMBiarFile {
         while (entry != null) {
             // grabbing info from the index file
             if (entry.getName().equals("BusinessObjects.xml")) {
-                final JAXBContext context = (JAXBContext) JAXBContext.newInstance(InfoObjects.class);
+                final JAXBContext context = JAXBContext.newInstance(InfoObjects.class);
                 final InfoObjects obj = (InfoObjects) context.createUnmarshaller().unmarshal(new InputStreamNoClose(zipInputStream));
                 for (InfoObject infoObject : obj.getObjects()) {
                     if(infoObject instanceof LCMJob) {
@@ -74,18 +74,15 @@ public class LCMBiarFile {
                 final ZipInputStream zipInputStream2 = new ZipInputStream(zipInputStream);
                 ZipEntry entry2 = zipInputStream2.getNextEntry();
                 while (entry2 != null) {
-                    //System.out.println(entry2.getName());
                     // grabbing info from the index file
                     if (entry2.getName().equals("BusinessObjects.xml")) {
-                        final JAXBContext context = (JAXBContext) JAXBContext.newInstance(InfoObjects.class);
+                        final JAXBContext context = JAXBContext.newInstance(InfoObjects.class);
                         final InfoObjects obj = (InfoObjects) context.createUnmarshaller().unmarshal(new InputStreamNoClose(zipInputStream2));
                         return obj;
                     }
-                   
                     // do other operation with the entries..
                     entry2 = zipInputStream2.getNextEntry();
                 }
-
             }
             // do other operation with the entries..
             entry = zipInputStream.getNextEntry();
@@ -103,16 +100,13 @@ public class LCMBiarFile {
                 final ZipInputStream zipInputStream2 = new ZipInputStream(zipInputStream);
                 ZipEntry entry2 = zipInputStream2.getNextEntry();
                 while (entry2 != null) {
-                    //System.out.println(entry2.getName());
                     // grabbing info from the index file
                     if (entry2.getName().equals(fileName)) {
                         return zipInputStream2;
                     }
-                   
                     // do other operation with the entries..
                     entry2 = zipInputStream2.getNextEntry();
                 }
-
             }
             // do other operation with the entries..
             entry = zipInputStream.getNextEntry();

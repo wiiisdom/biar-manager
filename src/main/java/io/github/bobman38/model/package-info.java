@@ -1,6 +1,6 @@
 @javax.xml.bind.annotation.XmlSchema (
     elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED,
-    attributeFormDefault = javax.xml.bind.annotation.XmlNsForm.UNQUALIFIED,
+    attributeFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED,
     xmlns = {
     @javax.xml.bind.annotation.XmlNs(prefix = "io",
                 namespaceURI="http://enterprise.businessobjects.com/4.0/infoobject"),
@@ -37,7 +37,6 @@
 
     @javax.xml.bind.annotation.XmlNs(prefix = "dsl.dsp",
                 namespaceURI="http://enterprise.businessobjects.com/4.0/dsl.datasecurityprofile"),
-
 
     @javax.xml.bind.annotation.XmlNs(prefix="xs",
                 namespaceURI="http://www.w3.org/2001/XMLSchema")

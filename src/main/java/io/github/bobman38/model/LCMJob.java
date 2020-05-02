@@ -1,55 +1,30 @@
 package io.github.bobman38.model;
 
 import java.util.List;
-import java.util.Objects;
 
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import org.eclipse.persistence.oxm.annotations.XmlPath;
 
 @XmlType(name = "LCMJob", namespace = "http://enterprise.businessobjects.com/4.0/lcmjob")
-
 public class LCMJob extends InfoObject {
 
-    @XmlPath(value = "lcmj:FileProperties/io:Files/io:File")
-    private List<File> files;
+    private FileProperties fileProperties;
 
-    public LCMJob() {
+    @XmlElement(name="FileProperties", namespace="http://enterprise.businessobjects.com/4.0/lcmjob")
+    public FileProperties getFileProperties() {
+        return this.fileProperties;
     }
 
-    public LCMJob(List<File> files) {
-        this.files = files;
+    public void setFileProperties(FileProperties fileProperties) {
+        this.fileProperties = fileProperties;
     }
 
     public List<File> getFiles() {
-        return this.files;
-    }
-
-    public void setFiles(List<File> files) {
-        this.files = files;
-    }
-
-    public LCMJob files(List<File> files) {
-        this.files = files;
-        return this;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == this)
-            return true;
-        if (!(o instanceof LCMJob)) {
-            return false;
+        if(this.getFileProperties() == null || this.getFileProperties().getFiles() == null || this.getFileProperties().getFiles().getFiles() == null) {
+            throw new IllegalArgumentException("No files in LCMJob");
         }
-        LCMJob lCMJob = (LCMJob) o;
-        return Objects.equals(files, lCMJob.files);
+        return this.getFileProperties().getFiles().getFiles();
     }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(files);
-    }
-
-
 
     public int getBiarFileOrder() {
         int fileOrder = 0;
@@ -63,4 +38,13 @@ public class LCMJob extends InfoObject {
         throw new IllegalArgumentException("No lcmbiar file in this LCMJob");
     }
 
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName()+"{" +
+            " CUID='" + getCUID() + "'" +
+            ", name='" + getName() + "'" +
+            ", description='" + getDescription() + "'" +
+            ", fileProperties='" + getFileProperties() + "'" +
+            "}\n";
+    }
 }

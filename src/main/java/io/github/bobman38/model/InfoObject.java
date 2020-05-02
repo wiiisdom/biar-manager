@@ -1,8 +1,7 @@
 package io.github.bobman38.model;
 
-import java.util.Objects;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
-import org.eclipse.persistence.oxm.annotations.XmlPath;
 
 @XmlSeeAlso({
     Folder.class, 
@@ -17,7 +16,39 @@ import org.eclipse.persistence.oxm.annotations.XmlPath;
     GenericInfoObject.class,
     DSLDataSecurityProfile.class
     })
+
 public abstract class InfoObject {
+
+    protected String CUID;
+    protected String name;
+    protected String description;
+
+    public void setCUID(String CUID) {
+        this.CUID = CUID;
+    }
+
+    @XmlElement(name="CUID", namespace="http://enterprise.businessobjects.com/4.0/infoobject")
+    public String getCUID() {
+        return this.CUID;
+    }
+
+    @XmlElement(name="Name", namespace="http://enterprise.businessobjects.com/4.0/infoobject")
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @XmlElement(name="Description", namespace="http://enterprise.businessobjects.com/4.0/infoobject")
+    public String getDescription() {
+        return this.description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     @Override
     public String toString() {
@@ -27,58 +58,4 @@ public abstract class InfoObject {
             ", description='" + getDescription() + "'" +
             "}\n";
     }
-
-    @XmlPath(value = "io:CUID/text()")
-    protected String CUID;
-
-    public String getName() {
-        return this.name;
-    }
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    @XmlPath(value = "io:Name/text()")
-    protected String name;
-
-    @XmlPath(value = "io:Description/text()")
-    protected String description;
-
-    public InfoObject() {
-    }
-
-    public InfoObject(String CUID) {
-        this.CUID = CUID;
-    }
-
-    public String getCUID() {
-        return this.CUID;
-    }
-
-    public void setCUID(String CUID) {
-        this.CUID = CUID;
-    }
-
-    public InfoObject CUID(String CUID) {
-        this.CUID = CUID;
-        return this;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == this)
-            return true;
-        if (!(o instanceof InfoObject)) {
-            return false;
-        }
-        InfoObject infoObject = (InfoObject) o;
-        return Objects.equals(CUID, infoObject.CUID);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(CUID);
-    }
-
 }
