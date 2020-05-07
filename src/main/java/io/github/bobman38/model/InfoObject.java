@@ -14,7 +14,19 @@ import javax.xml.bind.annotation.XmlSeeAlso;
     CustomRole.class,
     Universe.class,
     GenericInfoObject.class,
-    DSLDataSecurityProfile.class
+    DSLDataSecurityProfile.class,
+    Analytic.class,
+    Excel.class,
+    Word.class,
+    AFDashboardPage.class,
+    ObjectPackage.class,
+    Txt.class,
+    Program.class,
+    Hyperlink.class,
+    Publication.class,
+    Powerpoint.class,
+    Pdf.class,
+    Agnostic.class,
     })
 
 public abstract class InfoObject {
@@ -52,7 +64,7 @@ public abstract class InfoObject {
 
     @Override
     public String toString() {
-        return this.getClass().getSimpleName()+"{" +
+        return this.getClass().getSimpleName()+" {" +
             " CUID='" + getCUID() + "'" +
             ", name='" + getName() + "'" +
             ", description='" + getDescription() + "'" +

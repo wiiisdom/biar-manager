@@ -38,6 +38,42 @@
     @javax.xml.bind.annotation.XmlNs(prefix = "dsl.dsp",
                 namespaceURI="http://enterprise.businessobjects.com/4.0/dsl.datasecurityprofile"),
 
+    @javax.xml.bind.annotation.XmlNs(prefix = "ac",
+                namespaceURI="http://enterprise.businessobjects.com/4.0/analytic"),
+
+    @javax.xml.bind.annotation.XmlNs(prefix = "afdp",
+                namespaceURI="http://enterprise.businessobjects.com/4.0/afdashboardpage"),
+
+    @javax.xml.bind.annotation.XmlNs(prefix = "ag",
+                namespaceURI="http://enterprise.businessobjects.com/4.0/agnostic"),
+
+    @javax.xml.bind.annotation.XmlNs(prefix = "xl",
+                namespaceURI="http://enterprise.businessobjects.com/4.0/excel"),
+
+    @javax.xml.bind.annotation.XmlNs(prefix = "hl",
+                namespaceURI="http://enterprise.businessobjects.com/4.0/hyperlink"),
+
+    @javax.xml.bind.annotation.XmlNs(prefix = "op",
+                namespaceURI="http://enterprise.businessobjects.com/4.0/objectpackage"),
+
+    @javax.xml.bind.annotation.XmlNs(prefix = "pd",
+                namespaceURI="http://enterprise.businessobjects.com/4.0/pdf"),
+
+    @javax.xml.bind.annotation.XmlNs(prefix = "pp",
+                namespaceURI="http://enterprise.businessobjects.com/4.0/powerpoint"),
+
+    @javax.xml.bind.annotation.XmlNs(prefix = "prg",
+                namespaceURI="http://enterprise.businessobjects.com/4.0/program"),
+
+    @javax.xml.bind.annotation.XmlNs(prefix = "pu",
+                namespaceURI="http://enterprise.businessobjects.com/4.0/publication"),
+
+    @javax.xml.bind.annotation.XmlNs(prefix = "tx",
+                namespaceURI="http://enterprise.businessobjects.com/4.0/txt"),
+
+    @javax.xml.bind.annotation.XmlNs(prefix = "wo",
+                namespaceURI="http://enterprise.businessobjects.com/4.0/word"),
+
     @javax.xml.bind.annotation.XmlNs(prefix="xs",
                 namespaceURI="http://www.w3.org/2001/XMLSchema")
     }

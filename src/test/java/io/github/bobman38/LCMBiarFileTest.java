@@ -49,5 +49,13 @@ public class LCMBiarFileTest {
         Assert.assertEquals(21, index.getObjects().size());
     }
 
+    @Test
+    public void readBiarManagerTest() throws FileNotFoundException, Exception {
+        LCMBiarFile lcmbiar = new LCMBiarFile("src/test/resources/biarManagerTest.lcmbiar");
+        InfoObjects index = lcmbiar.getIndex();
+        Assert.assertNotNull(index);
+        Assert.assertEquals(28, index.getObjects().size());
+    }
+
 
 }

@@ -24,7 +24,7 @@ public class InfoObjects {
 
     @Override
     public String toString() {
-        return this.getClass().getSimpleName()+"{" +
+        return this.getClass().getSimpleName()+" {" +
             " objects='" + getObjects() + "'" +
             "}\n";
     }
