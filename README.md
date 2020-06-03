@@ -1,3 +1,5 @@
+![Java CI with Maven](https://github.com/bobman38/biar-manager/workflows/Java%20CI%20with%20Maven/badge.svg)
+
 # biar-manager
 
 **biar-manager** is a java library that can read and manage a BIAR file generated 
