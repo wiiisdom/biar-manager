@@ -1,4 +1,4 @@
-![Java CI with Maven](https://github.com/bobman38/biar-manager/workflows/Java%20CI%20with%20Maven/badge.svg)
+![Java CI with Maven](https://github.com/gbandsmith/biar-manager/workflows/Java%20CI%20with%20Maven/badge.svg)
 
 # biar-manager
 
@@ -19,9 +19,9 @@ Add it to your maven project:
 In `dependencies`:
 ```
 <dependency>
-  <groupId>io.github.bobman38</groupId>
+  <groupId>com.gbandsmith</groupId>
   <artifactId>biar-manager</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 </dependency>
 ```
 
