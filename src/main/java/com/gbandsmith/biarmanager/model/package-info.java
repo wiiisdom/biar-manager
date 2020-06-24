@@ -38,6 +38,12 @@
     @javax.xml.bind.annotation.XmlNs(prefix = "dsl.dsp",
                 namespaceURI="http://enterprise.businessobjects.com/4.0/dsl.datasecurityprofile"),
 
+    @javax.xml.bind.annotation.XmlNs(prefix = "dsl.bso",
+                namespaceURI="http://enterprise.businessobjects.com/4.0/dsl.businesssecurityoptions"),
+
+    @javax.xml.bind.annotation.XmlNs(prefix = "dsl.dso",
+                namespaceURI="http://enterprise.businessobjects.com/4.0/dsl.datasecurityoptions"),
+
     @javax.xml.bind.annotation.XmlNs(prefix = "ac",
                 namespaceURI="http://enterprise.businessobjects.com/4.0/analytic"),
 

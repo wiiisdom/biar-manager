@@ -15,6 +15,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
     Universe.class,
     GenericInfoObject.class,
     DSLDataSecurityProfile.class,
+    DSLDataSecurityOptions.class,
+    DSLBusinessSecurityOptions.class,
     Analytic.class,
     Excel.class,
     Word.class,
