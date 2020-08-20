@@ -1,4 +1,4 @@
-![Java CI with Maven](https://github.com/gbandsmith/biar-manager/workflows/Java%20CI%20with%20Maven/badge.svg)
+![Java CI with Maven](https://github.com/gbandsmith/biar-manager/workflows/Java%20CI%20with%20Maven/badge.svg) [![javadoc](https://javadoc.io/badge2/com.gbandsmith/biar-manager/javadoc.svg)](https://javadoc.io/doc/com.gbandsmith/biar-manager) 
 
 # biar-manager
 
@@ -21,7 +21,7 @@ In `dependencies`:
 <dependency>
   <groupId>com.gbandsmith</groupId>
   <artifactId>biar-manager</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
 </dependency>
 ```
 
