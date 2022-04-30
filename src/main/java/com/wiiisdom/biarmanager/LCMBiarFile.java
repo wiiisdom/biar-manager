@@ -89,6 +89,7 @@ public class LCMBiarFile {
             entry = zipInputStream.getNextEntry();
         }
         zipInputStream.close();
+        System.out.println("test");
         throw new IllegalArgumentException("Can't read BusinessObjects.xml of the inside lcmbiar.");
     }
 
