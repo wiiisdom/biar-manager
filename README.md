@@ -1,9 +1,9 @@
-![Java CI with Maven](https://github.com/wiiisdom/biar-manager/workflows/Java%20CI%20with%20Maven/badge.svg) [![javadoc](https://javadoc.io/badge2/com.wiiisdom/biar-manager/javadoc.svg)](https://javadoc.io/doc/com.wiiisdom/biar-manager) 
+![Java CI with Maven](https://github.com/wiiisdom/biar-manager/workflows/Java%20CI%20with%20Maven/badge.svg) [![javadoc](https://javadoc.io/badge2/com.wiiisdom/biar-manager/javadoc.svg)](https://javadoc.io/doc/com.wiiisdom/biar-manager)
 
 # biar-manager
 
-**biar-manager** is a java library that can read and manage a BIAR file generated 
-from SAP Business Objects platform. The BIAR format (Business Intelligence ARchive) 
+**biar-manager** is a java library that can read and manage a BIAR file generated
+from SAP Business Objects platform. The BIAR format (Business Intelligence ARchive)
 is a format used to extract and import BI content from and to SAP Business Objects
 system.
 
@@ -17,6 +17,7 @@ Actually the library is able to read from the `lcmbiar` format (SAP Business Obj
 Add it to your maven project:
 
 In `dependencies`:
+
 ```
 <dependency>
   <groupId>com.wiiisdom</groupId>
@@ -49,7 +50,7 @@ Main steps for the release:
 mvn versions:set -DnewVersion=1.0.0
 
 # Deploy
-mvn clean deploy
+mvn clean deploy -Ppublish
 ```
 
 ## Thanks
