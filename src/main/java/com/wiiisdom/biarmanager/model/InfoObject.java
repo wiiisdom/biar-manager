@@ -1,7 +1,7 @@
 package com.wiiisdom.biarmanager.model;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
 
 @XmlSeeAlso({ Folder.class, LCMJob.class, Webi.class, CrystalReport.class, DSLUniverse.class, CCISDataConnection.class,
         UserGroup.class, CustomRole.class, Universe.class, GenericInfoObject.class, DSLDataSecurityProfile.class,

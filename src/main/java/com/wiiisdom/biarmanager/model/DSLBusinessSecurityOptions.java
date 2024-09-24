@@ -1,6 +1,6 @@
 package com.wiiisdom.biarmanager.model;
 
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlType;
 
 @XmlType(
         name = "DSL.BusinessSecurityOptions",

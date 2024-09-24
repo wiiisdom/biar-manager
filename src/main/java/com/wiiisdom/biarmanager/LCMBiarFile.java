@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import javax.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBContext;
 
 import com.wiiisdom.biarmanager.model.InfoObject;
 import com.wiiisdom.biarmanager.model.InfoObjects;
