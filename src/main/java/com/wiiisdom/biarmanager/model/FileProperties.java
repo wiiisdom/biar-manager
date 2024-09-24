@@ -1,7 +1,7 @@
 package com.wiiisdom.biarmanager.model;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 @XmlType(name = "FileProperties", namespace = "http://enterprise.businessobjects.com/4.0/lcmjob")
 public class FileProperties {

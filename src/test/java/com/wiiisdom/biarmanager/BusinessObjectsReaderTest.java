@@ -6,8 +6,8 @@ import static org.junit.Assert.assertNotNull;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
 
 import com.wiiisdom.biarmanager.model.InfoObjects;
 import com.wiiisdom.biarmanager.model.LCMJob;
